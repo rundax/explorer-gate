@@ -32,8 +32,8 @@ func main() {
 	}
 
 	path, err := os.Getwd()
-	if fileExists(path + ".env") {
-		fmt.Printf(`loading .env file: %s`, path + ".env")
+	if fileExists(path + "/.env") {
+		fmt.Printf(`loading .env file: %s`, path + "./env")
 		err := godotenv.Load()
 		if err != nil {
 			panic("Error loading .env file")
